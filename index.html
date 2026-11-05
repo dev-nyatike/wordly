@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordly - Online Dictionary</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>📚 Wordly</h1>
+            <p>Your simple online dictionary</p>
+            <button id="theme-toggle" type="button">
+                🌙 Toggle Dark Mode
+            </button>
+        </header>
+
+        <section class="search-section">
+            <h2>Discover a Word</h2>
+
+            <form id="search-form">
+                <label for="word-input">Enter a word:</label>
+
+                <div class="search-box">
+                    <input
+                        type="text"
+                        id="word-input"
+                        placeholder="e.g. beautiful"
+                        required
+                    >
+
+                    <button type="submit" id="search-button">
+                        Search
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <p id="status" role="status" aria-live="polite"></p>
+
+        <section id="results" aria-live="polite">
+            <p class="welcome-message">
+                Search for a word to see its meaning.
+            </p>
+        </section>
+
+        <section class="favorites-section">
+            <h2>⭐ My Saved Words</h2>
+            <ul id="favorites-list"></ul>
+        </section>
+
+        <footer>
+            <p>Wordly Dictionary App | Built with HTML, CSS and JavaScript</p>
+        </footer>
+
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+
+/* General page styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f5fa;
+    color: #222;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 30px auto;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background-color: #4b59c5;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 5px;
+}
+
+header p {
+    margin-bottom: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#theme-toggle {
+    background-color: white;
+    color: #333;
+}
+
+/* Search section */
+.search-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.search-section h2 {
+    margin-bottom: 15px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.search-box button {
+    background-color: #4b59c5;
+    color: white;
+}
+
+/* Status message */
+#status {
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+/* Search results */
+#results {
+    margin-bottom: 25px;
+}
+
+.welcome-message {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}
+
+.definition-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.definition-card h2 {
+    color: #4b59c5;
+    font-size: 28px;
+}
+
+.phonetic {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.meaning {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.meaning h3 {
+    color: #4b59c5;
+    margin-bottom: 10px;
+}
+
+.meaning li {
+    margin-left: 22px;
+    margin-bottom: 10px;
+}
+
+.favorite-button {
+    margin-top: 15px;
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.favorite-button.saved {
+    background-color: #39875b;
+}
+
+/* Favorites section */
+.favorites-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.favorites-section h2 {
+    margin-bottom: 15px;
+}
+
+#favorites-list {
+    list-style: none;
+}
+
+#favorites-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.favorite-word {
+    background-color: #4b59c5;
+    color: white;
+}
+
+.remove-favorite {
+    background-color: #d9534f;
+    color: white;
+}
+
+.empty-favorites {
+    color: #777;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px 10px;
+    color: #777;
+    font-size: 14px;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #181a25;
+    color: #f5f5f5;
+}
+
+.dark-mode .search-section,
+.dark-mode .definition-card,
+.dark-mode .favorites-section {
+    background-color: #292c3b;
+    color: #f5f5f5;
+}
+
+.dark-mode .phonetic,
+.dark-mode .empty-favorites,
+.dark-mode .welcome-message {
+    color: #ccc;
+}
+
+.dark-mode .meaning {
+    border-color: #555;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    #favorites-list li {
+        flex-wrap: wrap;
+    }
+}
